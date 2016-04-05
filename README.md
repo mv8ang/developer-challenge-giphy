@@ -21,9 +21,9 @@ The Task:
 Create a Single Page application that interacts with the [Giphy API](https://github.com/Giphy/GiphyAPI).
 You can use the public beta key as authentication.
 
-We want users to be able to do a search on the api, that calls the random enpoint.
-Then the app should display the image found.
-The app should display a history of 5 images, which it shows on the page.
-The history should be clear'able.
+- We want users to be able to do a search on the api, that calls the random enpoint.
+- Then the app should display the image found.
+- The app should display a history of 5 images, which it shows on the page.
+- The history should be clear'able.
 
 That's it! Feel free to dig around or add more flashy stuff :)
