@@ -19,8 +19,7 @@ export default class App extends Component {
 
         request.get(url, (err, res) => {
                 this.setState({results: res.body.data});
-
-                this.state.history.length > 4 ? this.state.history.pop() : '';
+                this.state.history.length > 4 ? this.state.history.shift() : '';
                 let tempHistory = [...this.state.history, this.state.results];
                 this.setState({history: tempHistory});
         })
