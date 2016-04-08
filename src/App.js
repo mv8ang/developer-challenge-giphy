@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Search from './components/Search'
-import ResultItem from './components/ResultItem'
-import {ResultList, HistoryList} from './components/ResultList'
+import React, {Component} from 'react';
+import Search from './components/Search/Search'
+import ResultItem from './components/ResultItem/ResultItem'
+import {ResultList, HistoryList} from './components/Lists/Lists'
 import request from 'superagent'
-
+require('./styles.scss');
 
 export default class App extends Component {
     constructor(props) {
@@ -31,11 +31,15 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>
-                <Search doSearch={this.doSearch} resetHistory={this.resetHistory} />
-                <ResultItem />
-                <ResultList items={this.state.results} />
-                <HistoryList history={this.state.history} />
+            <div className="container">
+                <header>
+                    <Search doSearch={this.doSearch} resetHistory={this.resetHistory} />
+                </header>
+
+                <main>
+                    <ResultList items={this.state.results} />
+                    <HistoryList history={this.state.history} />
+                </main>
             </div>
         );
     }

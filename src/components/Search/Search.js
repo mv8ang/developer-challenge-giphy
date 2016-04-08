@@ -9,14 +9,13 @@ class Search extends React.Component {
     };
 
     render() {
-
         return (
             <div className="search-form">
                 <form onSubmit={this.newSearch}>
-                    <input type="text" ref="searchInput" />
+                    <input type="text" ref="searchInput" placeholder="what are you looking for" />
                 </form>
 
-                <button onClick={this.props.resetHistory}>Reset</button>
+                <button onClick={this.props.resetHistory}>Reset history</button>
             </div>
         )
     }

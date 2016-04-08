@@ -1,0 +1,17 @@
+.result-item {
+  display: inline-block;
+  text-align: center;
+
+  &.new-item {
+    img {
+      max-height: 400px; // header height
+      width: auto;
+    }
+  }
+
+  &.history-item {
+    img {
+      max-width: 192px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import 'components/Lists/Lists';
+@import 'components/ResultItem/ResultItem';
+@import 'components/Search/Search';
+@import 'App';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #1F1F1F;
+}
+
+header {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}

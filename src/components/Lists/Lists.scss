@@ -1,0 +1,36 @@
+// get an auto-prefixer
+
+.history-container,
+.new-container .info-box,
+.new-container {
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-container {
+  height: 400px;
+  margin-bottom: 40px;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+
+  .info-box {
+    background: #CDBDAE;
+    padding: 15px 10px;
+    margin-top: 10px;
+
+    p {
+      color: #fff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+.history-container {
+  height: 200px;
+}

@@ -1,25 +1,26 @@
 import React from 'react'
-import ResultItem from './ResultItem'
+import ResultItem from './../ResultItem/ResultItem'
 
 class ResultList extends React.Component {
     render() {
         let items = this.props.items;
 
         return (
-            <ResultItem image={items.image_original_url} />
+            <div className="new-container">
+                <ResultItem url={items.image_original_url} itemType="new-item" />
+            </div>
         )
     }
 }
 
 class HistoryList extends React.Component {
     render() {
-        let history = this.props.history;
         const mapHistory = this.props.history.map((item, i) => {
-            return <ResultItem image={item.image_original_url} key={i} />
+            return <ResultItem url={item.image_original_url} key={i} itemType="history-item" />
         });
 
         return (
-            <div>
+            <div className="history-container">
                 {mapHistory}
             </div>
         )
