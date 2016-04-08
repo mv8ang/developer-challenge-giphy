@@ -18,11 +18,13 @@ class ResultItem extends React.Component {
 }
 
 ResultItem.propTypes = {
-    itemType: React.PropTypes.string
+    itemType: React.PropTypes.string,
+    url: React.PropTypes.string
 }
 
 ResultItem.defaultProps = {
-    itemType: "new-search"
+    itemType: "new-search",
+    url: "http://media4.giphy.com/media/eoxomXXVL2S0E/giphy.gif"
 }
 
 export default ResultItem;
