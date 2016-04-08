@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Search from './components/Search/Search'
 import ResultItem from './components/ResultItem/ResultItem'
 import {ResultList, HistoryList} from './components/Lists/Lists'
+import ClearHistory from './components/ClearHistory/ClearHistory'
 import request from 'superagent'
 require('./styles.scss');
 
@@ -33,12 +34,13 @@ export default class App extends Component {
         return (
             <div className="container">
                 <header>
-                    <Search doSearch={this.doSearch} resetHistory={this.resetHistory} />
+                    <Search doSearch={this.doSearch} />
                 </header>
 
                 <main>
                     <ResultList items={this.state.results} />
                     <HistoryList history={this.state.history} />
+                    <ClearHistory resetHistory={this.resetHistory} />
                 </main>
             </div>
         );

@@ -12,10 +12,9 @@ class Search extends React.Component {
         return (
             <div className="search-form">
                 <form onSubmit={this.newSearch}>
-                    <input type="text" ref="searchInput" placeholder="what are you looking for" />
+                    <input type="text" ref="searchInput" placeholder="write some words here" />
+                    <button className="button-search">Search</button>
                 </form>
-
-                <button onClick={this.props.resetHistory}>Reset history</button>
             </div>
         )
     }

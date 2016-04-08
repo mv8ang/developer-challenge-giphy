@@ -7,7 +7,7 @@ class ResultList extends React.Component {
 
         return (
             <div className="new-container">
-                <ResultItem url={items.image_original_url} itemType="new-item" />
+                <ResultItem result={items} itemType="new-item" />
             </div>
         )
     }
@@ -16,7 +16,7 @@ class ResultList extends React.Component {
 class HistoryList extends React.Component {
     render() {
         const mapHistory = this.props.history.map((item, i) => {
-            return <ResultItem url={item.image_original_url} key={i} itemType="history-item" />
+            return <ResultItem result={item} key={i} itemType="history-item" />
         });
 
         return (
