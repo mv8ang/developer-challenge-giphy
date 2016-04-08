@@ -20,14 +20,19 @@
     border: 0;
     border-bottom: 2px solid #FA4B00;
     cursor: pointer;
-    -webkit-box-shadow: inset 0 -2px #FA4B00;
-    box-shadow: inset 0 -2px #FA4B00;
 
-    &:active {
-      top: 1px;
+    &:active, &:focus {
       outline: none;
       -webkit-box-shadow: none;
       box-shadow: none;
+    }
+
+    &:hover {
+      background: darken(#FA4B00, 10%);
+      border-bottom-color: darken(#FA4B00, 20%);
+      transition: all .5s;
+      -webkit-box-shadow: inset 0 -2px darken(#FA4B00, 20%);
+      box-shadow: inset 0 -2px darken(#FA4B00, 20%);
     }
   }
 }

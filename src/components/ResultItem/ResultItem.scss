@@ -12,6 +12,7 @@
   &.history-item {
     img {
       max-width: 192px;
+      max-height: 200px; // .history-container height
     }
   }
 }
