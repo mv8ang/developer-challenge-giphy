@@ -9,11 +9,11 @@ class ResultItem extends React.Component {
                 <a href={result.url}>
                     <img src={result.image_original_url} alt=""/>
                 </a>
+
                 {/* only show the info box for the current items */}
-                {/* FIX THIS */}
-                {this.props.url && this.props.itemType=="new-item" ?
+                {this.props.result.url && this.props.itemType=="new-item" ?
                     <div className="info-box">
-                        <p>{this.props.url}</p>
+                        <p>{this.props.result.url}</p>
                     </div>
                 :''}
             </div>

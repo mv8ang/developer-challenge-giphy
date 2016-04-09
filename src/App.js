@@ -11,7 +11,8 @@ export default class App extends Component {
         super(props);
         this.state = {
             results: '',
-            history: []
+            history: [],
+            somethingHappened: false
         };
     };
 
@@ -22,25 +23,25 @@ export default class App extends Component {
                 this.setState({results: res.body.data});
                 this.state.history.length > 4 ? this.state.history.shift() : '';
                 let tempHistory = [...this.state.history, this.state.results];
-                this.setState({history: tempHistory});
+                this.setState({history: tempHistory, somethingHappened: true});
         })
     };
 
     resetHistory = () => {
-        this.setState({history: []});
+        this.setState({history: [], somethingHappened: false});
     };
 
     render() {
         return (
             <div className="container">
                 <header>
-                    <Search doSearch={this.doSearch} />
+                    <Search doSearch={this.doSearch} somethingHappened={this.state.somethingHappened} />
                 </header>
 
                 <main>
                     <ResultList items={this.state.results} />
                     <HistoryList history={this.state.history} />
-                    <ClearHistory resetHistory={this.resetHistory} />
+                    <ClearHistory resetHistory={this.resetHistory} display={this.state.somethingHappened} />
                 </main>
             </div>
         );
