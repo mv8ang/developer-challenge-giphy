@@ -2,7 +2,11 @@
 @import 'components/ResultItem/ResultItem';
 @import 'components/Search/Search';
 @import 'components/ClearHistory/ClearHistory';
-@import 'App';
+@import 'components/Main/Main';
+@import 'components/Single/Single';
+@import 'components/RandomGif/RandomGif';
+
+@import 'components/App/App';
 
 * {
   box-sizing: border-box;
